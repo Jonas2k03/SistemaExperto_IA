@@ -1,0 +1,18 @@
+package co.edu.unicauca.rules;
+
+import co.edu.unicauca.modelo.Paciente;
+import co.edu.unicauca.modelo.EscenciaFloral;
+
+rule "Recetar Mimulus para miedo"
+when
+    $paciente : Paciente(sintomas contains "miedo")
+then
+    System.out.println("Recomendación: Recetar Mimulus para el paciente " + $paciente.getNombre());
+end
+
+rule "Recetar Aspen para ansiedad"
+when
+    $paciente : Paciente(sintomas contains "ansiedad")
+then
+    System.out.println("Recomendación: Recetar Aspen para el paciente " + $paciente.getNombre());
+end
