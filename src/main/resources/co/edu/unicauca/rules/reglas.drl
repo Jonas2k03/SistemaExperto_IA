@@ -3,16 +3,382 @@ package co.edu.unicauca.rules;
 import co.edu.unicauca.modelo.Paciente;
 import co.edu.unicauca.modelo.EscenciaFloral;
 
-rule "Recetar Mimulus para miedo"
+// Agrimony – tortura mental detrás de una cara alegre
+rule "Recetar Agrimony"
+when
+    $paciente : Paciente(sintomas contains "tortura mental" || sintomas contains "cara alegre")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Agrimony", "agrimony.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Aspen – miedo o ansiedad de origen desconocido
+rule "Recetar Aspen"
+when
+    $paciente : Paciente(sintomas contains "miedo desconocido" || sintomas contains "ansiedad desconocida")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Aspen", "aspen.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Beech – intolerancia
+rule "Recetar Beech"
+when
+    $paciente : Paciente(sintomas contains "intolerancia")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Beech", "beech.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Centaury – personas serviciales que no saben decir 'no'
+rule "Recetar Centaury"
+when
+    $paciente : Paciente(sintomas contains "no sabe decir no" || sintomas contains "servicial en exceso")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Centaury", "centaury.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Cerato – personas que buscan siempre la opinión de los demás
+rule "Recetar Cerato"
+when
+    $paciente : Paciente(sintomas contains "busca opinión" || sintomas contains "duda de sí mismo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Cerato", "cerato.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Cherry Plum – miedo a perder el control, histeria
+rule "Recetar Cherry Plum"
+when
+    $paciente : Paciente(sintomas contains "miedo a perder el control" || sintomas contains "histeria")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Cherry Plum", "cherry_plum.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Chestnut Bud – incapacidad de aprender de los errores
+rule "Recetar Chestnut Bud"
+when
+    $paciente : Paciente(sintomas contains "no aprende de los errores" || sintomas contains "repite errores")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Chestnut Bud", "chestnut_bud.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Chicory – amor egoísta y posesivo
+rule "Recetar Chicory"
+when
+    $paciente : Paciente(sintomas contains "amor egoísta" || sintomas contains "posesivo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Chicory", "chicory.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Clematis – soñando con el futuro sin prestar atención al presente
+rule "Recetar Clematis"
+when
+    $paciente : Paciente(sintomas contains "soñando con el futuro" || sintomas contains "desatento al presente")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Clematis", "clematis.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Crab Apple – odia su apariencia
+rule "Recetar Crab Apple"
+when
+    $paciente : Paciente(sintomas contains "odia su apariencia" || sintomas contains "necesidad de limpieza")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Crab Apple", "crab_apple.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Elm – abrumado por la responsabilidad
+rule "Recetar Elm"
+when
+    $paciente : Paciente(sintomas contains "abrumado por la responsabilidad")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Elm", "elm.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Gentian – desánimo y abatimiento tras un contratiempo
+rule "Recetar Gentian"
+when
+    $paciente : Paciente(sintomas contains "desánimo" || sintomas contains "abatimiento tras contratiempo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Gentian", "gentian.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Gorse – desesperanza y derrotismo
+rule "Recetar Gorse"
+when
+    $paciente : Paciente(sintomas contains "desesperanza" || sintomas contains "derrotismo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Gorse", "gorse.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Heather – egocentrismo y preocupación por sí mismo
+rule "Recetar Heather"
+when
+    $paciente : Paciente(sintomas contains "egocentrismo" || sintomas contains "preocupación por sí mismo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Heather", "heather.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Holly – odio, envidia y celos
+rule "Recetar Holly"
+when
+    $paciente : Paciente(sintomas contains "odio" || sintomas contains "envidia" || sintomas contains "celos")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Holly", "holly.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Honeysuckle – vivir en el pasado
+rule "Recetar Honeysuckle"
+when
+    $paciente : Paciente(sintomas contains "vivir en el pasado")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Honeysuckle", "honeysuckle.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Hornbeam – cansancio ante el pensamiento de hacer algo
+rule "Recetar Hornbeam"
+when
+    $paciente : Paciente(sintomas contains "cansancio por anticipación" || sintomas contains "fatiga mental")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Hornbeam", "hornbeam.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Impatiens – impaciencia
+rule "Recetar Impatiens"
+when
+    $paciente : Paciente(sintomas contains "impaciencia")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Impatiens", "impatiens.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Larch – falta de confianza
+rule "Recetar Larch"
+when
+    $paciente : Paciente(sintomas contains "falta de confianza")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Larch", "larch.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Mimulus – miedo de cosas conocidas
+rule "Recetar Mimulus"
 when
     $paciente : Paciente(sintomas contains "miedo")
 then
-    System.out.println("Recomendación: Recetar Mimulus para el paciente " + $paciente.getNombre());
+    EscenciaFloral esencia = new EscenciaFloral("Mimulus", "mimulus.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
 end
 
-rule "Recetar Aspen para ansiedad"
+// Mustard – profunda tristeza sin razón
+rule "Recetar Mustard"
 when
-    $paciente : Paciente(sintomas contains "ansiedad")
+    $paciente : Paciente(sintomas contains "tristeza sin razón" || sintomas contains "profunda tristeza")
 then
-    System.out.println("Recomendación: Recetar Aspen para el paciente " + $paciente.getNombre());
+    EscenciaFloral esencia = new EscenciaFloral("Mustard", "mustard.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Oak – personas incansables que superan el punto de agotamiento
+rule "Recetar Oak"
+when
+    $paciente : Paciente(sintomas contains "incansable" || sintomas contains "agotamiento extremo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Oak", "oak.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Olive – agotamiento tras un esfuerzo físico o mental
+rule "Recetar Olive"
+when
+    $paciente : Paciente(sintomas contains "agotamiento" || sintomas contains "cansancio extremo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Olive", "olive.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Pine – culpa
+rule "Recetar Pine"
+when
+    $paciente : Paciente(sintomas contains "culpa")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Pine", "pine.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Red Chestnut – excesiva preocupación por los seres queridos
+rule "Recetar Red Chestnut"
+when
+    $paciente : Paciente(sintomas contains "preocupación por seres queridos")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Red Chestnut", "red_chestnut.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Rock Rose – terror y miedo extremo
+rule "Recetar Rock Rose"
+when
+    $paciente : Paciente(sintomas contains "terror" || sintomas contains "miedo extremo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Rock Rose", "rock_rose.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Rock Water – abnegación, rigidez y auto-represión
+rule "Recetar Rock Water"
+when
+    $paciente : Paciente(sintomas contains "abnegación" || sintomas contains "rigidez" || sintomas contains "auto-represión")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Rock Water", "rock_water.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Scleranthus – incapacidad de elegir entre alternativas
+rule "Recetar Scleranthus"
+when
+    $paciente : Paciente(sintomas contains "incapacidad de elegir" || sintomas contains "duda entre alternativas")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Scleranthus", "scleranthus.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Star of Bethlehem – shock, conmoción
+rule "Recetar Star of Bethlehem"
+when
+    $paciente : Paciente(sintomas contains "shock" || sintomas contains "conmoción")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Star of Bethlehem", "star_of_bethlehem.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Sweet Chestnut – angustia mental extrema cuando todo se ha intentado y no hay esperanza
+rule "Recetar Sweet Chestnut"
+when
+    $paciente : Paciente(sintomas contains "angustia extrema" || sintomas contains "sin esperanza")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Sweet Chestnut", "sweet_chestnut.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Vervain – exceso de entusiasmo
+rule "Recetar Vervain"
+when
+    $paciente : Paciente(sintomas contains "exceso de entusiasmo")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Vervain", "vervain.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Vine – dominante e inflexible
+rule "Recetar Vine"
+when
+    $paciente : Paciente(sintomas contains "dominante" || sintomas contains "inflexible")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Vine", "vine.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Walnut – protección al cambio e influencias no deseadas
+rule "Recetar Walnut"
+when
+    $paciente : Paciente(sintomas contains "protección al cambio" || sintomas contains "influencias no deseadas")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Walnut", "walnut.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Water Violet – personas reservadas y dignas que se sienten aisladas
+rule "Recetar Water Violet"
+when
+    $paciente : Paciente(sintomas contains "reservado" || sintomas contains "aislado")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Water Violet", "water_violet.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// White Chestnut – pensamientos no deseados y argumentos mentales
+rule "Recetar White Chestnut"
+when
+    $paciente : Paciente(sintomas contains "pensamientos no deseados" || sintomas contains "argumentos mentales")
+then
+    EscenciaFloral esencia = new EscenciaFloral("White Chestnut", "white_chestnut.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Wild Oat – incertidumbre sobre la propia dirección en la vida
+rule "Recetar Wild Oat"
+when
+    $paciente : Paciente(sintomas contains "incertidumbre sobre dirección" || sintomas contains "no sabe qué hacer en la vida")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Wild Oat", "wild_oat.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Wild Rose – deriva, resignación y apatía
+rule "Recetar Wild Rose"
+when
+    $paciente : Paciente(sintomas contains "deriva" || sintomas contains "resignación" || sintomas contains "apatía")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Wild Rose", "wild_rose.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
+end
+
+// Willow – autocompasión y resentimiento
+rule "Recetar Willow"
+when
+    $paciente : Paciente(sintomas contains "autocompasión" || sintomas contains "resentimiento")
+then
+    EscenciaFloral esencia = new EscenciaFloral("Willow", "willow.jpg");
+    $paciente.addRecomendacion(esencia);
+    System.out.println("Recomendación: Recetar " + esencia.getNombre() + " para el paciente " + $paciente.getNombre());
 end
