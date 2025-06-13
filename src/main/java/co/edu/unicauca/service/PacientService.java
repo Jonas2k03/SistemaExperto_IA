@@ -21,7 +21,6 @@ public class PacientService {
             kieSession.dispose();
         }
         System.out.printf("Paciente: %s%n", paciente.getNombre());
-        System.out.printf("Sintomas: %s%n", paciente.getSintomas());
         return paciente;
     }
 }

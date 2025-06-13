@@ -18,9 +18,15 @@ public class RecomendacionController {
     @PostMapping("/obtener")
     public List<EscenciaFloral> obtenerRecomendaciones(@RequestBody Map<String, Object> payload) {
         String nombre = (String) payload.get("nombre");
+        @SuppressWarnings("unchecked")
         List<String> sintomas = (List<String>) payload.get("sintomas");
+        System.out.println("Síntomas recibidos: " + sintomas);
+        
         Paciente paciente = new Paciente(nombre, sintomas);
         pacientService.applyRules(paciente);
-        return paciente.getRecomendaciones();
+        
+        List<EscenciaFloral> recomendaciones = paciente.getRecomendaciones();
+        
+        return recomendaciones;
     }
 } 
